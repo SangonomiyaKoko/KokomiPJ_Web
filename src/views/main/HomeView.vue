@@ -13,15 +13,22 @@ import {
   ElButton,
   ElCard,
 } from "element-plus";
+
+// 添加以下代码
+import { onMounted } from 'vue';
+
+onMounted(() => {
+  document.title = 'Kokomi Tool';
+});
 </script>
 
 <template>
-  <div class="min-w-[320px]">
+  <div class="min-w-[320px] dark:bg-gray-900 dark:text-white">
     <el-container class="flex flex-col min-h-screen">
-      <el-header class="shadow-md">
+      <el-header class="shadow-md dark:bg-gray-800">
         <BaseHeader />
       </el-header>
-      <el-main class="flex-grow">
+      <el-main class="flex-grow dark:bg-gray-900">
         <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <!-- 主要内容部分 -->
           <div class="py-8 sm:py-12 lg:py-16 min-h-[calc(100vh-64px)] flex items-center">
@@ -59,7 +66,7 @@ import {
           <div class="py-12">
             <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               <!-- 卡片循环部分 -->
-              <el-card v-for="i in 6" :key="i" class="h-48 rounded-xl">
+              <el-card v-for="i in 6" :key="i" class="h-48 rounded-xl dark:bg-gray-800 dark:text-white">
                 <div class="flex flex-col h-full">
                   <div class="pb-2 text-2xl font-bold border-b">
                     {{ $t(`product.name${i}`) }}
@@ -82,7 +89,7 @@ import {
           </div>
         </div>
       </el-main>
-      <el-footer class="bg-gray-100">
+      <el-footer class="bg-white dark:bg-gray-800 p-0">
         <BaseFooter />
       </el-footer>
     </el-container>

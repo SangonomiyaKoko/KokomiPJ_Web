@@ -8,5 +8,6 @@ export default {
     extend: {},
   },
   plugins: [],
+  darkMode: 'class', // 启用基于类的深色模式
 }
 
