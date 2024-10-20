@@ -3,11 +3,18 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import { useI18n } from 'vue-i18n'
+
+// 切换语言
 const { locale } = useI18n()
 
 const changeLang = (lang) => {
     locale.value = lang
 }
+</script>
+
+<script>
+// 按需引入需要的ui组件
+import { ElMenu, ElMenuItem, ElDropdown, ElDropdownItem, ElDropdownMenu } from 'element-plus'
 </script>
 
 <template>

@@ -1,8 +1,11 @@
 <!-- KokomiWeb设计, path: /design -->
 
 <script setup>
+// 导入相关组件
 import BaseHeader from '@/components/main/BaseHeader.vue';
 import BaseFooter from '@/components/main/BaseFooter.vue'
+// 按需引入需要的ui组件
+import { ElContainer, ElHeader, ElMain, ElFooter } from 'element-plus'
 </script>
 
 <template>
