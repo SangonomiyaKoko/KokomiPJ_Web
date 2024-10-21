@@ -5,7 +5,7 @@ export default {
         blog: '博客',
         api: 'API',
         oa: 'OA系统',
-        message1: '《战舰世界》游戏大数据平台',
+        message1: '「战舰世界」游戏大数据平台',
         message2: '多端兼容，便捷、快速且功能丰富',
         start: '开始使用',
         docs: '设计文档',

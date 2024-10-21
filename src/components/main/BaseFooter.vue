@@ -1,32 +1,32 @@
 <!-- 首页Footer组件 -->
 
 <template>
-    <div class="footer-container">
-        <div class="footer-content">
-            <p class="footer-message">Released under the MIT License</p>
-            <p class="footer-message">Copyright © 2022-2024 Maoyu</p>
-        </div>
+  <footer class="w-full text-gray-600 bg-gray-50 h dark:bg-gray-800 dark:text-gray-300 dark:border-gray-700">
+    <div class="container mx-auto">
+      <div class="flex flex-col justify-center items-center">
+        <p class="mb-2 text-sm">Released under the MIT License</p>
+        <p class="text-sm">Copyright © 2022-{{ currentYear }} Maoyu</p>
+      </div>
     </div>
+  </footer>
 </template>
 
-<script></script>
+<script setup>
+import { ref, onMounted } from 'vue'
+
+const currentYear = ref(new Date().getFullYear())
+</script>
 
 <style scoped>
-.footer-container {
-    text-align: center;
-    border-top: 1px solid #e2e2e3;
+footer {
+  transition: background-color 0.3s ease;
 }
 
-.footer-content {
-    margin-top: 10px;
-    margin-bottom: 10px;
+footer:hover {
+  background-color: #f9fafb;
 }
 
-.footer-message {
-    margin: 0;
-    line-height: 24px;
-    font-size: 14px;
-    font-weight: 500;
-    color: rgba(60, 60, 67, .78);
+.dark footer:hover {
+  background-color: #1f2937;
 }
 </style>

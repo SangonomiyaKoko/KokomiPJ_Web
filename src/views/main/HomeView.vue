@@ -2,320 +2,102 @@
 
 <script setup>
 // 导入相关组件
-import BaseHeader from '@/components/main/BaseHeader.vue';
-import BaseFooter from '@/components/main/BaseFooter.vue'
+import BaseHeader from "@/components/main/BaseHeader.vue";
+import BaseFooter from "@/components/main/BaseFooter.vue";
 // 按需引入需要的ui组件
-import { ElContainer, ElHeader, ElMain, ElFooter, ElButton, ElCard } from 'element-plus'
+import {
+  ElContainer,
+  ElHeader,
+  ElMain,
+  ElFooter,
+  ElButton,
+  ElCard,
+} from "element-plus";
+
+// 添加以下代码
+import { onMounted } from 'vue';
+
+onMounted(() => {
+  document.title = 'Kokomi Tool';
+});
 </script>
 
 <template>
-    <div class="common-layout">
-        <el-container>
-            <el-header>
-                <BaseHeader />
-            </el-header>
-            <el-main>
-                <div class="home">
-                    <div class="home-content">
-                        <div class="content-text">
-                            <div class="container">
-                                <div class="main">
-                                    <h1 class="name">
-                                        <span class="clip">
-                                            Kokomi Tool
-                                        </span>
-                                    </h1>
-                                    <p class="text">{{ $t('home.message1') }}</p>
-                                    <p class="tag">{{ $t('home.message2') }}</p>
-                                    <div class="butten-items">
-                                        <el-button type="primary" round class="butten-item">{{ $t('home.start')
-                                            }}</el-button>
-                                        <el-button round class="butten-item">{{ $t('home.docs') }}</el-button>
-                                        <el-button type="success" round class="butten-item">{{ $t('home.sponsor')
-                                            }}</el-button>
-                                    </div>
-                                </div>
-                                <div class="image">
-                                    <div class="image-container">
-                                        <img src="@/assets/png/kokomi-big.png" alt="kokomi-big.png" class="kokomi-png">
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="content-card">
-                            <div class="container">
-                                <div class="items">
-                                    <div class="item">
-                                        <el-card class="card-item">
-                                            <div class="card-header">
-                                                {{ $t('product.name1') }}
-                                            </div>
-                                            <div class="card-body">
-                                                {{ $t('product.details1') }}
-                                            </div>
-                                            <div class="card-footer">
-                                                <div class="product-verson">
-                                                    {{ $t('product.version1') }}
-                                                </div>
-                                                <div class="product-link">
-                                                    <a href="https://github.com/SangonomiyaKoko"
-                                                        rel="noopener noreferrer">
-                                                        link→
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </el-card>
-                                    </div>
-                                    <div class="item">
-                                        <el-card class="card-item">
-                                            <div class="card-header">
-                                                {{ $t('product.name2') }}
-                                            </div>
-                                            <div class="card-body">
-                                                {{ $t('product.details2') }}
-                                            </div>
-                                            <div class="card-footer">
-                                                <div class="product-verson">
-                                                    {{ $t('product.version2') }}
-                                                </div>
-                                                <div class="product-link">
-                                                    <a href="https://github.com/SangonomiyaKoko"
-                                                        rel="noopener noreferrer">
-                                                        link→
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </el-card>
-                                    </div>
-                                    <div class="item">
-                                        <el-card class="card-item">
-                                            <div class="card-header">
-                                                {{ $t('product.name3') }}
-                                            </div>
-                                            <div class="card-body">
-                                                {{ $t('product.details3') }}
-                                            </div>
-                                            <div class="card-footer">
-                                                <div class="product-verson">
-                                                    {{ $t('product.version3') }}
-                                                </div>
-                                                <div class="product-link">
-                                                    <a href="https://github.com/SangonomiyaKoko"
-                                                        rel="noopener noreferrer">
-                                                        link→
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </el-card>
-                                    </div>
-                                    <div class="item">
-                                        <el-card class="card-item">
-                                            <div class="card-header">
-                                                {{ $t('product.name4') }}
-                                            </div>
-                                            <div class="card-body">
-                                                {{ $t('product.details4') }}
-                                            </div>
-                                            <div class="card-footer">
-                                                <div class="product-verson">
-                                                    {{ $t('product.version4') }}
-                                                </div>
-                                                <div class="product-link">
-                                                    <a href="https://github.com/SangonomiyaKoko"
-                                                        rel="noopener noreferrer">
-                                                        link→
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </el-card>
-                                    </div>
-                                    <div class="item">
-                                        <el-card class="card-item">
-                                            <div class="card-header">
-                                                {{ $t('product.name5') }}
-                                            </div>
-                                            <div class="card-body">
-                                                {{ $t('product.details5') }}
-                                            </div>
-                                            <div class="card-footer">
-                                                <div class="product-verson">
-                                                    {{ $t('product.version5') }}
-                                                </div>
-                                                <div class="product-link">
-                                                    <a href="https://github.com/SangonomiyaKoko"
-                                                        rel="noopener noreferrer">
-                                                        link→
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </el-card>
-                                    </div>
-                                    <div class="item">
-                                        <el-card class="card-item">
-                                            <div class="card-header">
-                                                {{ $t('product.name6') }}
-                                            </div>
-                                            <div class="card-body">
-                                                {{ $t('product.details6') }}
-                                            </div>
-                                            <div class="card-footer">
-                                                <div class="product-verson">
-                                                    {{ $t('product.version6') }}
-                                                </div>
-                                                <div class="product-link">
-                                                    -
-                                                </div>
-                                            </div>
-                                        </el-card>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+  <div class="min-w-[320px] dark:bg-gray-900 dark:text-white">
+    <el-container class="flex flex-col min-h-screen">
+      <el-header class="shadow-md dark:bg-gray-800">
+        <BaseHeader />
+      </el-header>
+      <el-main class="flex-grow dark:bg-gray-900">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <!-- 主要内容部分 -->
+          <div class="py-8 sm:py-12 lg:py-16 min-h-[calc(100vh-64px)] flex items-center">
+            <div class="flex flex-col-reverse items-center lg:flex-row">
+              <!-- 文字部分 -->
+              <div class="mt-6 w-full lg:w-3/5 lg:pr-12 lg:mt-0">
+                <h1 class="mb-3 text-3xl font-bold leading-tight sm:text-4xl md:text-5xl lg:text-6xl">
+                  <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-400">
+                    Kokomi Tool
+                  </span>
+                </h1>
+                <p class="mb-3 text-xl sm:text-2xl md:text-3xl">{{ $t("home.message1") }}</p>
+                <p class="mb-4 text-base text-gray-600 sm:text-lg md:text-xl">{{ $t("home.message2") }}</p>
+                <div class="grid grid-cols-2 gap-3 w-full sm:grid-cols-3">
+                  <!-- 按钮部分 -->
+                  <el-button type="primary" round :size="screenSize" class="m-0 w-full text-xs sm:text-sm md:text-base">
+                    {{ $t("home.start") }}
+                  </el-button>
+                  <el-button round :size="screenSize" class="m-0 w-full text-xs sm:text-sm md:text-base">
+                    {{ $t("home.docs") }}
+                  </el-button>
+                  <el-button type="success" round :size="screenSize" class="col-span-2 m-0 w-full text-xs sm:text-sm md:text-base sm:col-span-1">
+                    {{ $t("home.sponsor") }}
+                  </el-button>
                 </div>
-            </el-main>
-            <el-footer>
-                <BaseFooter />
-            </el-footer>
-        </el-container>
-    </div>
+              </div>
+              <!-- 图片部分 -->
+              <div class="mb-6 w-full lg:w-2/5 lg:mb-0">
+                <img src="@/assets/png/kokomi-big.png" alt="kokomi-big.png" class="max-w-[50%] sm:max-w-[60%] md:max-w-[70%] lg:max-w-full h-auto mx-auto" />
+              </div>
+            </div>
+          </div>
+          
+          <!-- 卡片部分 -->
+          <div class="py-12">
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              <!-- 卡片循环部分 -->
+              <el-card v-for="i in 6" :key="i" class="h-48 rounded-xl dark:bg-gray-800 dark:text-white">
+                <div class="flex flex-col h-full">
+                  <div class="pb-2 text-2xl font-bold border-b">
+                    {{ $t(`product.name${i}`) }}
+                  </div>
+                  <div class="flex-grow py-2 text-gray-600">
+                    {{ $t(`product.details${i}`) }}
+                  </div>
+                  <div class="flex justify-between text-gray-400">
+                    <div>{{ $t(`product.version${i}`) }}</div>
+                    <div>
+                      <a v-if="i !== 6" href="https://github.com/SangonomiyaKoko" rel="noopener noreferrer" class="text-gray-400 no-underline">
+                        link→
+                      </a>
+                      <span v-else>-</span>
+                    </div>
+                  </div>
+                </div>
+              </el-card>
+            </div>
+          </div>
+        </div>
+      </el-main>
+      <el-footer class="bg-white dark:bg-gray-800 p-0">
+        <BaseFooter />
+      </el-footer>
+    </el-container>
+  </div>
 </template>
 
 <style scoped>
-.home {
-    width: 100%;
-    height: 100%;
-    margin-top: 64px;
-}
-
-.home .home-content {
-    padding-bottom: 128px;
-}
-
-.home-content .content-text,
-.home-content .content-card {
-    padding: 0 64px 0 64px;
-}
-
-.home-content .content-text {
-    padding: 64px 64px;
-}
-
-.content-text .container {
-    text-align: left;
-    flex-direction: row;
-    display: flex;
-    margin: 0 auto;
-    max-width: 1200px;
-}
-
-.content-text .main {
-    order: 1;
-    max-width: 600px;
-}
-
-.content-text .main .name {
-    font-size: 60px;
-    line-height: 64px;
-    margin: 0;
-}
-
-.content-text .clip {
-    background: linear-gradient(120deg, #bd34fe -80%, #6fd6eb);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.content-text .main .text {
-    font-size: 52px;
-    line-height: 64px;
-    margin: 0;
-}
-
-.content-text .main .tag {
-    font-size: 24px;
-    margin-top: 12px;
-    line-height: 36px;
-    color: rgba(60, 60, 67, .78);
-}
-
-.content-text .main .butten-items {
-    justify-content: flex-start;
-}
-
-.content-text .main .butten-item {
-    width: 125px;
-    height: 40px;
-    font-size: 16px;
-    padding: 0 20px;
-}
-
-.content-text .image {
-    flex-grow: 1;
-    order: 2;
-    margin: 0;
-    min-height: 100%;
-}
-
-.content-text .image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    transform: translate(-32px, -32px);
-}
-
-.content-text .image .kokomi-png {
-    max-width: 320px;
-    max-height: 320px;
-}
-
-.content-card .container {
-    margin: 0 auto;
-    max-width: 1200px;
-}
-
-.content-card .items {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -8px;
-}
-
-.content-card .item {
-    padding: 8px;
-    width: calc(96% / 3);
-}
-
-.content-card .item .card-item {
-    height: 180px;
-    border-radius: 12px;
-}
-
-.content-card .card-item .card-header {
-    font-size: 24px;
-    line-height: 36px;
-    font-weight: bold;
-    border-bottom: 1px solid #e2e2e3;
-}
-
-.content-card .card-item .card-body {
-    height: 75px;
-    margin-top: 7px;
-    margin-bottom: 3px;
-    color: rgba(60, 60, 67, .78);
-}
-
-.content-card .card-item .card-footer {
-    display: flex;
-    justify-content: space-between;
-    color: rgba(60, 60, 60, .50);
-}
-
-.content-card .card-item .card-footer a {
-    color: rgba(60, 60, 60, .50);
-    text-decoration: none;
+.el-button {
+  margin: 0 !important;
 }
 </style>

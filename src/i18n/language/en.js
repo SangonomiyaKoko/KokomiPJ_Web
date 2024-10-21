@@ -5,7 +5,7 @@ export default {
         blog: 'Blog',
         api: 'API',
         oa: 'OA',
-        message1: '"World of Warships" game data platform',
+        message1: 'World of Warships Game Data Platform',
         message2: 'Multi-terminal compatible, fast, simple and powerful',
         start: 'Get start',
         docs: 'Design docs',
